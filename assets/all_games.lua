@@ -253,6 +253,16 @@ local cat_allgames_09_content = {
 	
 local cat_allgames_A_content = {
 		{
+		title_en = "A Boy and His Dog",
+		img = "http://archive.org/services/img/abah-00336-00000",
+		description_en = [[2D platformer for PSP.]],
+		dl_url = "http://archive.org/download/abah-00336-00000/ABAHD.zip",
+		pub_date = "2022-01-05",
+		author = "Andy Eikum",
+		updated_date = "2005-12-03",
+		version = "",
+		},
+		{
 		title_en = "A Dream Of Summer",
 		img = "http://archive.org/services/img/a-dream-of-summer.-7z",
 		description_en = [[Toshiki, the realist. Mizuna, the girl he met on the roof. And BROY, the school band whose members surround them. It\'s the summer of their third year, and Toshiki must face not only the school festival, but also a promise that he may never be able to fulfill.]],
@@ -7175,6 +7185,7 @@ local cat_allgames_I_content = {
 		author = "PSmonkey, MGFox, Produkt",
 		updated_date = "2006-01-11",
 		version = "0.1",
+		destination = "ms0:/",
 		},
 		{
 		title_en = "Iris Star Wars Mod",

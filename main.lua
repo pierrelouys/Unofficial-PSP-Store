@@ -55,7 +55,8 @@ function draw_single_item(item_page, selected_tile)
 	if item_page["version"] then screen.print(35,55, "Version "..item_page["version"],0.5,color.white,color.gray) end
 	if item_page["updated_date"] then screen.print(35,70, item_page["updated_date"],0.5,color.white,color.gray) end
 	screen.print(35,100, item_page["description_en"],1,color.white,color.gray)
-	screen.print(10, 250, "URL: "..item_page["dl_url"])	
+	local url_string = #item_page["dl_url"] > 60 and (string.sub(item_page["dl_url"], 0, 60).."...") or item_page["dl_url"]
+	screen.print(10, 250, "URL: "..url_string, 0.6)	
 	if item_page["eboot_path"] then	
 		draw.fillrect(300,40,150,50, color.green)
 		screen.print(320, 70, "[] to Launch")
@@ -96,7 +97,7 @@ function draw_home_tiles(selected_category_table, starting_tile)
 	draw.rect(((480/3)*((selected_tile - 1) % 3)), vert, (480/3), (272/3), color.red)
 	screen.print(20,185, item_page["title_en"],0.7,color.white, neon_pink)		
 	screen.print(150,205,selected_tile.."/"..#selected_category_table["content"], 0.7, concrete_gray)	
-	screen.print(20,205, item_page["pub_date"],0.7, concrete_gray)	
+	if item_page["updated_date"] then screen.print(20,205, item_page["updated_date"],0.7, concrete_gray) end
 	screen.print(330,205, "Select = categories",0.7, concrete_gray)
 	screen.print(20,230, "<- L",0.7, concrete_gray)	
 	screen.print(200,220, selected_category_table["title_en"])		

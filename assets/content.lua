@@ -2589,9 +2589,18 @@ local cat_testing_content = {
 local cat_ptf_themes_content = {
 		{
 		title_en = "15th Anniversary Theme",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/PlayStation15thAnniversary_Theme-%20PSP.jpg",
 		description_en = [[Test theme.]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/PlayStation15thAnniversary_Theme-%20PSP.ptf",
 		pub_date = "2022-01-04",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "BoondocksTheme",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/BoondocksTheme.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/BoondocksTheme.ptf",
+		pub_date = "2022-01-07",
 		destination = "ms0:/PSP/THEME/",
 		},
 		{
@@ -2788,7 +2797,7 @@ local cat_ptf_themes_content = {
 		},
 		{
 		title_en = "Okami",
-		-- img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/okami.jpg",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/okami.jpg",
 		description_en = [[]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/okami.ptf",
 		pub_date = "2022-01-07",
@@ -2820,7 +2829,7 @@ local cat_ptf_themes_content = {
 		},
 		{
 		title_en = "Ps20Th3",
-		-- img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/ps20th3.jpg",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/ps20th3.jpg",
 		description_en = [[]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/ps20th3.ptf",
 		pub_date = "2022-01-07",

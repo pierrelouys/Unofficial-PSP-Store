@@ -6095,6 +6095,7 @@ local cat_30day_2_2005_content = {
 		author = "PSmonkey, MGFox, Produkt",
 		updated_date = "2006-01-11",
 		version = "0.1",
+		destination = "ms0:/",
 		},
 		{
 		title_en = "Toppler PSP",

@@ -134,7 +134,7 @@ end
 function onNetGetFile(size, written)
 	draw.fillrect(0,0,480,272, night)
 	screen.print(50,50, "Downloading...",0.7,color.white, neon_pink)
-	screen.print(50,70, written.." out of "..size)
+	screen.print(50,70, comma_value(written).." out of "..comma_value(size))
 	local transfer_speed = math.floor((written / 1024) / (transfer_duration:time() / 1000))
 	screen.print(50,90, transfer_speed.." KB/s")
 	local wifi_pct = wlan.strength()
@@ -147,7 +147,7 @@ end
 function onExtractFiles(size, written, name)
 	draw.fillrect(0,0,480,272, night)
 	screen.print(50,50, "Extracting "..name.."...",0.7,color.white, neon_pink)
-	screen.print(50,70, written.." out of "..size)
+	screen.print(50,70, comma_value(written).." out of "..comma_value(size))
 	if name:upper():match("^[^\/]+\/(EBOOT.PBP)$") then
 		item_page["eboot_path"] = name
 		screen.print(50,90, item_page["eboot_path"])
@@ -192,6 +192,11 @@ function show_categories(categories_table, current_category)
 	screen.print(15 + (150 * math.floor((current_category - 1) / entries_per_col)), 
 					38 + (((current_category - 1) % entries_per_col) * 18),">")	
 	draw.line(20, 255, 460, 255, color.white)
+end
+
+function comma_value(n) -- credit http://richard.warburton.it
+	local left,num,right = string.match(n,'^([^%d]*%d)(%d*)(.-)$')
+	return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
 end
 
 splash()

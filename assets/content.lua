@@ -190,6 +190,129 @@ local cat_featured_content = {
 		updated_date = "2006-04-14",
 		},
 	}
+	
+local cat_featured_apps_content = { 
+		{
+		title_en = "PSP-FTPD",
+		img = "http://archive.org/services/img/psp-ftpd.7z",
+		description_en = [[FTP file transfer on PSP.]],
+		dl_url = "http://archive.org/download/psp-ftpd.7z/pspftpd-v0.5.0.zip",
+		pub_date = "2022-01-07",
+		author = "PSPKrazy, Raf, ZX-81",
+		updated_date = "2008-10-01",
+		version = "0.5.0",
+		},
+		{
+		title_en = "CMFileManager PSP",
+		img = "http://archive.org/services/img/cmfile-manager-psp-go.-7z",
+		description_en = [[A multi-purpose file manager for the PSP, heavily inspired by the CM file manager design. There are two releases: one is for a regular PSPs and other is for PSP Go with an external SD (M2) card.]],
+		dl_url = "http://archive.org/download/cmfile-manager-psp-go.-7z/CMFileManager-PSP-4.10.zip",
+		pub_date = "2022-01-07",
+		author = "Joel16",
+		updated_date = "2021-12-26",
+		version = "4.10",
+		},
+		{
+		title_en = "PSP Filer [PSPファイラー]",
+		img = "http://archive.org/services/img/file-00370-00000",
+		description_en = [[File manager for PSP.]],
+		dl_url = "http://archive.org/download/file-00370-00000/pspfiler.zip",
+		pub_date = "2022-01-07",
+		author = "Mediumgauge",
+		updated_date = "2010-01-31",
+		version = "6.6",
+		},
+		{
+		title_en = "PSP Maps",
+		img = "http://archive.org/services/img/psp-maps.-7z",
+		description_en = [[Google Maps on your PSP. Working fine as of 2021.]],
+		dl_url = "http://archive.org/download/psp-maps.-7z/PSP-Maps.zip",
+		pub_date = "2022-01-07",
+		author = "Antoine Jacquet (Royale)",
+		updated_date = "2008-01-01",
+		version = "2.2",
+		},
+		{
+		title_en = "PSP Flash Player",
+		img = "http://archive.org/services/img/swfplayerv13.7z",
+		description_en = [[Flash player for PSP.]],
+		dl_url = "http://archive.org/download/swfplayerv13.7z/swfplayerv13.zip",
+		pub_date = "2022-01-07",
+		author = "PSPHacks.net Development Team",
+		updated_date = "2006-03-02",
+		version = "1.3",
+		},
+		{
+		title_en = "PSP Everest",
+		img = "http://archive.org/services/img/pspeverest-2-rev-2src.-7z",
+		description_en = [[System information utility for PSP.]],
+		dl_url = "http://archive.org/download/pspeverest-2-rev-2src.-7z/PSPEverest-2-Rev.5.zip",
+		pub_date = "2022-01-07",
+		author = "frostegater",
+		updated_date = "2012-01-12",
+		version = "2 Rev. 5",
+		},
+		{
+		title_en = "POPStation PSP",
+		img = "http://archive.org/services/img/popstation-psp.7z",
+		description_en = [[Converts PS1 iso files into PSP eboots.]],
+		dl_url = "http://archive.org/download/popstation-psp.7z/popstation-psp-4.2.zip",
+		pub_date = "2022-01-07",
+		author = "superfury",
+		updated_date = "2011-08-10",
+		version = "4.2",
+		},
+		{
+		title_en = "PSP WiFile Transfer",
+		img = "http://archive.org/services/img/psp-wi-file-transfer-v-1.0-a.-7z",
+		description_en = [[App to transfer files over Wi-Fi.]],
+		dl_url = "http://archive.org/download/psp-wi-file-transfer-v-1.0-a.-7z/PSP_WiFile_Transfer_v1.0A.zip",
+		pub_date = "2022-01-07",
+		author = "Luis Pestana (*eyelash)",
+		updated_date = "2007-03-02",
+		version = "1.0 Alpha",
+		},
+		{
+		title_en = "PSP-PDA",
+		img = "http://archive.org/services/img/psppdav1.3.2fw3x.7z",
+		description_en = [[Utility apps for PSP.]],
+		dl_url = "http://archive.org/download/psppdav1.3.2fw3x.7z/Old%20Versions/psppdav1.3.2fw3x.zip",
+		pub_date = "2022-01-07",
+		author = "Rob_psp, ZX-81",
+		updated_date = "2008-05-09",
+		version = "1.3.2",
+		},
+		{
+		title_en = "PSPRadio",
+		img = "http://archive.org/services/img/pspradio-1.18.1400.7z",
+		description_en = [[Music streaming client for PSP.]],
+		dl_url = "http://archive.org/download/pspradio-1.18.1400.7z/PSPRadio1.18.1400.zip",
+		pub_date = "2022-01-07",
+		author = "Raf, Sandberg, jpfouch48",
+		updated_date = "2007-04-08",
+		version = "1.18.1400",
+		},
+		{
+		title_en = "FuSa GamePad",
+		img = "http://archive.org/services/img/fusa-game-pad.-7z",
+		description_en = [[Allows you to use a PSP as a PC controller by connecting it with a USB cable.]],
+		dl_url = "http://archive.org/download/fusa-game-pad.-7z/FusaGamePad.zip",
+		pub_date = "2022-01-07",
+		author = "Andy_maN",
+		updated_date = "2010-01-03",
+		version = "0.3",
+		},
+		{
+		title_en = "Links2",
+		img = "http://archive.org/services/img/links-2.1pre23_psp_r1261_stand_alone.7z",
+		description_en = [[PSP port of the Links web browser by Twibright Labs.]],
+		dl_url = "http://archive.org/download/links-2.1pre23_psp_r1261_stand_alone.7z/links-2.1pre23_psp_r1261.zip",
+		pub_date = "2022-01-07",
+		author = "Rafael Cabezas",
+		updated_date = "2007-02-06",
+		version = "1261",
+		},
+	}
 
 local cat_demoscene_content = {
 		{
@@ -3010,10 +3133,16 @@ local cat_ptf_themes_content = {
 --
 
 local cat_featured_meta = { 
-	title_en = "Featured",
+	title_en = "Featured games",
 	description_en = [[Selection of cool homebrew projects that
 						you need to be aware of]],
 	content = cat_featured_content
+	}
+	
+local cat_featured_apps_meta = { 
+	title_en = "Featured apps",
+	description_en = [[Selection of useful PSP apps.]],
+	content = cat_featured_apps_content
 	}
 	
 local cat_hall_meta = { 
@@ -3196,6 +3325,7 @@ local macro_top_page = {
 	title_en = "Front page",
 	content = {
 		cat_featured_meta,
+		cat_featured_apps_meta,
 		cat_hall_meta,
 		cat_demoscene_meta,
 		}

@@ -2788,7 +2788,7 @@ local cat_ptf_themes_content = {
 		},
 		{
 		title_en = "Okami",
-		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/okami.jpg",
+		-- img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/okami.jpg",
 		description_en = [[]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/okami.ptf",
 		pub_date = "2022-01-07",
@@ -2820,7 +2820,7 @@ local cat_ptf_themes_content = {
 		},
 		{
 		title_en = "Ps20Th3",
-		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/ps20th3.jpg",
+		-- img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/ps20th3.jpg",
 		description_en = [[]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/ps20th3.ptf",
 		pub_date = "2022-01-07",
@@ -2916,7 +2916,7 @@ local cat_ptf_themes_content = {
 		},
 		{
 		title_en = "Smooth(1)",
-		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/smooth(1).jpg",
+		-- img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/smooth(1).jpg",
 		description_en = [[]],
 		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/smooth(1).ptf",
 		pub_date = "2022-01-07",

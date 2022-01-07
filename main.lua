@@ -106,6 +106,12 @@ end
 
 function install_app(file_url, destination)
 	if wlan.isconnected() == false then wlan.connect() end
+	screen.print(50,50, "Starting download...",
+					0.7,color.white, neon_pink)
+	screen.print(50,70, file_url)
+	local wifi_pct = wlan.strength()
+	screen.print(200,220, "Signal strength: "..wifi_pct)
+	screen.flip()
 	transfer_duration = timer.new()
 	transfer_duration:start()
 	if file_url:match("\.zip$") then

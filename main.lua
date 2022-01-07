@@ -106,10 +106,12 @@ end
 
 function install_app(file_url, destination)
 	if wlan.isconnected() == false then wlan.connect() end
+	draw.fillrect(40,45,400,45, faded_bg)
 	screen.print(50,50, "Starting download...",
 					0.7,color.white, neon_pink)
-	screen.print(50,70, file_url)
+	screen.print(50,70, string.sub(file_url, 0, 50).."...")
 	local wifi_pct = wlan.strength()
+	draw.fillrect(195,215,150,20, faded_bg)
 	screen.print(200,220, "Signal strength: "..wifi_pct)
 	screen.flip()
 	transfer_duration = timer.new()

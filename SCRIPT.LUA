@@ -15,12 +15,14 @@ wlan_status_dictio = {
 wlan_status_dictio[-13] = "Generic error"
 
 function apply_updates(zip)
+	local extract_target = "assets/"
 	if files.exists(zip) == false then return end
 	local zip_content = files.scan(zip)
 	for i=1, #zip_content do
 		local upd_filename = zip_content[i]["name"]
 		print(upd_filename)
-		files.extractfile(zip, upd_filename, "assets/") 	
+		if upd_filename == "main.lua" then extract_target = "" end
+		files.extractfile(zip, upd_filename, extract_target) 	
 	end
 end
 

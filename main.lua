@@ -149,20 +149,15 @@ function download_tile(img_url, img_num)
 	if img_url then if img_url:match("^.+/(.+)$") then img_filename = img_url:match("^.+/(.+)$")..".jpg" end end
 	if not files.exists("img/"..img_filename) then
 		if wlan.isconnected() == false then wlan.connect() end
-		local status = false
-		local dl_attempts = 0
-		while status == false do
-			status = http.getfile(img_url, "img/"..img_filename)
-			draw.fillrect(0,0,480,272, night)
-			screen.print(50,50, "Fetching preview image "..img_num.."/"..fetch_count,
-							0.7,color.white, neon_pink)
-			screen.print(50,70, img_url)
-			local wifi_pct = wlan.strength()
-			screen.print(200,220, "Signal strength: "..wifi_pct)
-			screen.flip()
-			dl_attempts += 1
-			if dl_attempts > 2 then return ("img/no-preview.jpg") end
-		end
+		draw.fillrect(0,0,480,272, night)
+		screen.print(50,50, "Fetching preview image "..img_num.."/"..fetch_count,
+						0.7,color.white, neon_pink)
+		screen.print(50,70, img_url)
+		local wifi_pct = wlan.strength()
+		screen.print(200,220, "Signal strength: "..wifi_pct)
+		screen.flip()
+		tile_dl_status = http.getfile(img_url, "img/"..img_filename)
+		if tile_dl_status == false then return ("img/no-preview.jpg") end
 	end
 	return ("img/"..img_filename)
 end

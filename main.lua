@@ -21,7 +21,7 @@ function splash()
 	while one_sec:time() < 2000 do
 		draw.fillrect(0,0,480,272, night)
 		image.blit(eye, 295, 55)
-		screen.print(50,20, "Many homebrews only work with LME firmware!", 0.6, color.white)
+		screen.print(50,20, "Old homebrews only work with LME firmware and LEDA.prx", 0.6, color.white)
 		screen.print(50,35, "Your firmware: "..os.cfw(),0.6,color.white)
 		screen.print(50,220, "Unofficial PSP Store",1, color.white, neon_pink)
 		screen.print(50,240, "Powered by OneLua",0.6,color.white)
@@ -278,6 +278,20 @@ while running == true do
 				current_macro_cat -= 1
 			end
 		end		
+		if buttons.right then
+			if (current_macro_cat + 12) < #macro_categories then 
+				current_macro_cat += 12
+			else
+				current_macro_cat = #macro_categories
+			end
+		end		
+		if buttons.left then
+			if (current_macro_cat - 12) > 1 then 
+				current_macro_cat -= 12
+			else
+				current_macro_cat = 1
+			end
+		end	
 		if buttons.circle then
 			current_macro_cat = cats_origin[1]
 			current_category = cats_origin[2]

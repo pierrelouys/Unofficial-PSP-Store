@@ -1,3 +1,11 @@
+if files.exists("sys_info.ini") == false then
+	os.message("Many older homebrews only work with LME firmware "..
+	"and may not work if you are using Pro.\n\n"..
+	"Your firmware: "..os.cfw())
+	ini.write("sys_info.ini", "CFW", os.cfw() ) 	
+	ini.write("sys_info.ini", "model", hw.getmodel() ) 	
+end
+	
 collectgarbage()
 color.loadpalette()
 neon_pink = color.new(239,175,191) 
@@ -24,6 +32,7 @@ function apply_updates(zip)
 		if upd_filename == "main.lua" then extract_target = "" end
 		files.extractfile(zip, upd_filename, extract_target) 	
 	end
+	files.delete(zip)
 end
 
 function fetch_content(url, destination)

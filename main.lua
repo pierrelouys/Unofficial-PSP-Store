@@ -124,7 +124,10 @@ function install_app(file_url, destination)
 		status = http.getfile(file_url, save_path)
 	end
 	transfer_duration = nil
-	if file_url:match("\.zip$") then files.extract("temp.zip", destination) end
+	if file_url:match("\.zip$") then 
+		files.extract("temp.zip", destination) 
+		files.delete("temp.zip") 
+	end
 	return status
 end
 

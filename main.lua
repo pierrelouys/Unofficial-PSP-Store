@@ -57,6 +57,7 @@ function draw_single_item(item_page, selected_tile)
 	screen.print(35,100, item_page["description_en"],1,color.white,color.gray)
 	local url_string = #item_page["dl_url"] > 60 and (string.sub(item_page["dl_url"], 0, 60).."...") or item_page["dl_url"]
 	screen.print(10, 250, "URL: "..url_string, 0.6)	
+	if item_page["size"] then screen.print(35, 220, math.floor((item_page["size"]/1024)+0.5).." KB") end
 	if item_page["eboot_path"] then	
 		draw.fillrect(300,40,150,50, color.green)
 		screen.print(320, 70, "[] to Launch")

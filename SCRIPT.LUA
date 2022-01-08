@@ -30,7 +30,8 @@ function apply_updates(zip)
 		local upd_filename = zip_content[i]["name"]
 		print(upd_filename)
 		if upd_filename == "main.lua" then extract_target = "" end
-		files.extractfile(zip, upd_filename, extract_target) 	
+		if files.exists(extract_target..upd_filename) then files.delete(extract_target..upd_filename) end
+		files.extractfile(zip, upd_filename, extract_target) 
 	end
 	files.delete(zip)
 end

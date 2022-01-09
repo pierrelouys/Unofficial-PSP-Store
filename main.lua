@@ -13,21 +13,6 @@ for i=1, 4 do
 	progress_indic[i] = image.load("assets/phewcumber/"..i..".png")
 end 
 prog_count = 1
-
-function splash()
-	local one_sec = timer.new()
-	one_sec:start()
-	local eye = image.load("assets/PolycarbonGames.png")
-	while one_sec:time() < 2000 do
-		draw.fillrect(0,0,480,272, night)
-		image.blit(eye, 295, 55)
-		screen.print(50,20, "Old homebrews only work with LME firmware and LEDA.prx", 0.6, color.white)
-		screen.print(50,35, "Your firmware: "..os.cfw(),0.6,color.white)
-		screen.print(50,220, "Unofficial PSP Store",1, color.white, neon_pink)
-		screen.print(50,240, "Powered by OneLua",0.6,color.white)
-		screen.flip()
-	end
-end
 	
 function reload_tiles(selected_category_table, current_category, starting_tile)
 	tile_mosaic = nil
@@ -264,7 +249,6 @@ function save_fave(item_to_fave)
 	io.close(file)
 end
 
-splash()
 starting_tile = 0	
 
 selected_category_table = macro_categories[current_macro_cat]["content"]

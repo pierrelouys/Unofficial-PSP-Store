@@ -9,7 +9,8 @@ end
 collectgarbage()
 color.loadpalette()
 neon_pink = color.new(239,175,191) 
-night = color.new(4,23,53) 
+night = color.new(4,23,53)
+faded_bg = color.new(100,100,100,150) 
 
 wlan_status_dictio = {
 	"Disconnected",
@@ -28,7 +29,6 @@ function apply_updates(zip)
 	local zip_content = files.scan(zip)
 	for i=1, #zip_content do
 		local upd_filename = zip_content[i]["name"]
-		print(upd_filename)
 		if upd_filename == "main.lua" then extract_target = "" end
 		if files.exists(extract_target..upd_filename) then files.delete(extract_target..upd_filename) end
 		files.extractfile(zip, upd_filename, extract_target) 
@@ -45,9 +45,12 @@ function fetch_content(url, destination)
 	while status == false do
 		status = http.getfile(url, destination)
 		draw.fillrect(0,0,480,272, night)
-		screen.print(50,50, "Refreshing app: "..destination, 0.7, color.white, neon_pink)
-		screen.print(50,70, url)
+		screen.print(50,20, "Unofficial PSP Store",1, color.white, neon_pink)
+		screen.print(50,40, "Powered by OneLua",0.6,color.white)
 		draw.filltriangle(200 + (0.02 * dltime:time()), 90, 200, 200, 450, 150, neon_pink)
+		draw.fillrect(40,95,400,45, faded_bg)
+		screen.print(50,100, "Refreshing app: "..destination, 0.7, color.white, neon_pink)
+		screen.print(50,120, string.sub(url, 0, 50).."...")
 		local wifi_pct = wlan.strength()
 		if wlan.isconnected() == false then 
 			wlan.connect()
@@ -62,10 +65,10 @@ end
 
 function onNetConnection(state)
 	draw.fillrect(0,0,480,272, night)
-	draw.line(20, 35, 460, 35, color.white)
-	screen.print(50,50, "Connecting", 0.7, color.white, neon_pink)
-	screen.print(50,70, "State "..state)
-	screen.print(50,90, wlan_status_dictio[wlan.status()] )
+	screen.print(50,20, "Unofficial PSP Store",1, color.white, neon_pink)
+	screen.print(50,40, "Powered by OneLua",0.6,color.white)	
+	screen.print(50,100, "Connecting", 0.7, color.white, neon_pink)
+	screen.print(50,120, "State "..state..": "..wlan_status_dictio[wlan.status()])
 	draw.filltriangle(280 + (20 * wlan.status()), 70, 200, 200, 450, 150, neon_pink) 	
 	draw.line(20, 235, 460, 235, color.white)
 	screen.print(50,240, "Nova Opificina Sonycus Portabilis. © MMXXII",0.6,color.white)

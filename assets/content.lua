@@ -3131,6 +3131,7 @@ macro_categories = {
 	macro_testing,
 	}
 
+if files.exists("assets/favorites.lua") then dofile("assets/favorites.lua") end
 if files.exists("assets/game_jams.lua") then dofile("assets/game_jams.lua") end
 if files.exists("assets/all_games.lua") then dofile("assets/all_games.lua") end
 if files.exists("assets/all_apps.lua") then dofile("assets/all_apps.lua") end

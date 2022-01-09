@@ -71,6 +71,12 @@ function draw_single_item(item_page, selected_tile)
 	else
 		screen.print(320, 50, "X to Download")
 	end
+	draw.fillrect(300,190,150,30, color.green)
+	if item_page["fave_status"] == true then
+		screen.print(320, 200, "Added to faves!")
+	else
+		screen.print(320, 200, "△ Add to Faves")
+	end	
 end
 
 function draw_home_tiles(selected_category_table, starting_tile)
@@ -205,6 +211,59 @@ function comma_value(n) -- credit http://richard.warburton.it
 	return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
 end
 
+function split(s, delimiter)
+    result = {};
+    for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+        table.insert(result, match);
+    end
+    return result;
+end
+
+function save_fave(item_to_fave)
+	local faves_path = "assets/favorites.lua"
+	
+	local fave_entry = "{\n"..
+		"title_en = \"" .. item_to_fave["title_en"] .. "\",\n"..
+		"img = \"" .. (item_to_fave["img"] != nil and item_to_fave["img"] or "") .. "\",\n"..
+		"description_en = \[\[" .. (item_to_fave["description_en"] != nil and item_to_fave["description_en"] or "") .. "\]\],\n"..
+		"dl_url = \"" .. item_to_fave["dl_url"] .. "\",\n"..
+		(item_to_fave["size"] != nil and ("size = \"" .. item_to_fave["size"] .. "\",\n") or "")..
+		"author = \"" .. (item_to_fave["author"] != nil and item_to_fave["author"] or "") .. "\",\n"..
+		"updated_date = \"" .. (item_to_fave["updated_date"] != nil and item_to_fave["updated_date"] or "") .. "\",\n"..
+		"version = \"" .. (item_to_fave["version"] != nil and item_to_fave["version"] or "") .. "\",\n"..
+		"},\n"
+	
+	if files.exists(faves_path) == false then	
+		local header = "local cat_faves_content = {\n"
+		
+		local footer = "--NewEntriesHere\n}\n\nlocal cat_faves_meta = {\n"..
+			"title_en = \"Favorites\",\n"..
+			"description_en = [[" ..  os.nick() .. "'s most beloved.]],\n"..
+			"content = cat_faves_content\n"..
+			"}\n\n"..
+			"macro_faves = {\n"..
+			"title_en = \"Faves\",\n"..
+			"content = {\n"..
+			"cat_faves_meta\n"..
+			"}\n"..
+			"}\n"..	
+			"macro_categories[#macro_categories+1] = macro_faves"
+	
+		fave_entry = header .. fave_entry .. footer
+	else
+		local f = assert(io.open(faves_path, "rb"))
+		local faves_content = f:read("*all")
+		f:close()
+		local split_faves = split(faves_content, "--NewEntriesHere")
+		fave_entry = split_faves[1] .. fave_entry .. "--NewEntriesHere" .. split_faves[2]
+	end
+			
+	file = io.open(faves_path, "w")
+	io.output(file)
+	io.write(fave_entry)
+	io.close(file)
+end
+
 splash()
 starting_tile = 0	
 
@@ -229,6 +288,10 @@ while running == true do
 				destination = "ms0:/PSP/GAME/"
 			end		
 			item_page["dl_status"] = install_app(item_page["dl_url"], destination)
+		end		
+		if buttons.triangle then		
+			save_fave(item_page)
+			item_page["fave_status"] = true
 		end		
 		if buttons.square then
 			if item_page["eboot_path"] then

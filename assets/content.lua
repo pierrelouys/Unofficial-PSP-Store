@@ -2860,6 +2860,61 @@ local cat_ptf_themes_content = {
 		},		
 	}
 
+local cat_nyc2123_content = {
+		{
+		title_en = "Issue 1",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_01.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE1.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+		{
+		title_en = "Issue 2",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_02.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE2.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+		{
+		title_en = "Issue 3",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_03.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE3.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+		{
+		title_en = "Issue 4",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_04.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE4.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+		{
+		title_en = "Issue 5",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_05.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE5.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+		{
+		title_en = "Issue 6",
+		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_06.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE6.zip",
+		author = "Paco Allen, Chad Allen",
+		destination = "ms0:/PICTURE/",
+		},
+	}
+
+--
+-- META CATEGORIES
+--
+
 --
 -- TOP GAMES
 --
@@ -3033,6 +3088,10 @@ local cat_sokoban_meta = {
 	content = cat_sokoban_content
 	}
 	
+--
+-- SONY DEMOS
+--	
+	
 local cat_official_meta = { 
 	title_en = "Official demos",
 	description_en = [[If you can't access the Sony store, 
@@ -3040,11 +3099,19 @@ local cat_official_meta = {
 	content = cat_official_content
 	}
 	
+--
+-- THEMES
+--	
+	
 local cat_ptf_themes_meta = { 
 	title_en = "PTF Themes",
 	description_en = [[Swag for your PSP.]],
 	content = cat_ptf_themes_content
 	}
+	
+--
+-- TESTING
+--
 	
 local cat_testing_meta = { 
 	title_en = "Testing",
@@ -3052,6 +3119,20 @@ local cat_testing_meta = {
 					for testing purposes.]],
 	content = cat_testing_content
 	}
+	
+--
+-- MAGAZINES
+--
+
+local cat_nyc2123_meta = { 
+	title_en = "NYC 2123",
+	description_en = [[A graphic novel created for the PSP.]],
+	content = cat_nyc2123_content
+	}
+
+--
+-- MACRO CATEGORIES
+--
 
 local macro_top_page = { 
 	title_en = "Front page",
@@ -3060,6 +3141,13 @@ local macro_top_page = {
 		cat_featured_apps_meta,
 		cat_hall_meta,
 		cat_demoscene_meta,
+		}
+	}
+
+local macro_magazines = { 
+	title_en = "Magazines",
+	content = {
+		cat_nyc2123_meta,
 		}
 	}
 	
@@ -3126,6 +3214,7 @@ macro_categories = {
 	macro_genres,
 	macro_authors,
 	macro_off_demos,
+	macro_magazines,
 	macro_emulation,
 	macro_themes,
 	macro_testing,

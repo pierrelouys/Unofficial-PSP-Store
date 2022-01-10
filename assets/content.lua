@@ -3119,16 +3119,6 @@ local cat_testing_meta = {
 					for testing purposes.]],
 	content = cat_testing_content
 	}
-	
---
--- MAGAZINES
---
-
-local cat_nyc2123_meta = { 
-	title_en = "NYC 2123",
-	description_en = [[A graphic novel created for the PSP.]],
-	content = cat_nyc2123_content
-	}
 
 --
 -- MACRO CATEGORIES
@@ -3141,13 +3131,6 @@ local macro_top_page = {
 		cat_featured_apps_meta,
 		cat_hall_meta,
 		cat_demoscene_meta,
-		}
-	}
-
-local macro_magazines = { 
-	title_en = "Magazines",
-	content = {
-		cat_nyc2123_meta,
 		}
 	}
 	
@@ -3214,7 +3197,6 @@ macro_categories = {
 	macro_genres,
 	macro_authors,
 	macro_off_demos,
-	macro_magazines,
 	macro_emulation,
 	macro_themes,
 	macro_testing,

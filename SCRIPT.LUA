@@ -40,27 +40,33 @@ function fetch_content(url, destination)
 	if wlan.isconnected() == false then wlan.connect(1) end
 	local status = false
 	local dl_attempts = 0
-	local dltime = timer.new()
+	dltime = timer.new()
 	dltime:start()
+	onNetGet_params = {destination, url}
 	while status == false do
 		status = http.getfile(url, destination)
-		draw.fillrect(0,0,480,272, night)
-		screen.print(50,20, "Unofficial PSP Store",1, color.white, neon_pink)
-		screen.print(50,40, "Powered by OneLua",0.6,color.white)
-		draw.filltriangle(200 + (0.02 * dltime:time()), 90, 200, 200, 450, 150, neon_pink)
-		draw.fillrect(40,95,400,45, faded_bg)
-		screen.print(50,100, "Refreshing app: "..destination, 0.7, color.white, neon_pink)
-		screen.print(50,120, string.sub(url, 0, 50).."...")
-		local wifi_pct = wlan.strength()
-		if wlan.isconnected() == false then 
-			wlan.connect()
-		else
-			screen.print(200,220, "Signal strength: "..wifi_pct)
-		end
-		screen.flip()
 		dl_attempts += 1
 		if dl_attempts > 5 then return end
 	end
+	dltime = nil
+	onNetGet_params = nil
+end
+
+function onNetGetFile(size, written)
+	draw.fillrect(0,0,480,272, night)
+	screen.print(50,20, "Unofficial PSP Store",1, color.white, neon_pink)
+	screen.print(50,40, "Powered by OneLua",0.6,color.white)
+	draw.filltriangle(200 + (0.001 * dltime:time()), 90, 200, 200, 450, 150, neon_pink)
+	draw.fillrect(40,95,400,45, faded_bg) 
+	screen.print(50,100, "Refreshing app: "..onNetGet_params[1], 0.7, color.white, neon_pink)
+	screen.print(50,120, string.sub(onNetGet_params[2], 0, 50).."...")
+	local wifi_pct = wlan.strength()
+	if wlan.isconnected() == false then 
+		wlan.connect()
+	else
+		screen.print(200,220, "Signal strength: "..wifi_pct)
+	end
+	screen.flip()
 end
 
 function onNetConnection(state)

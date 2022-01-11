@@ -2,8 +2,8 @@ if files.exists("sys_info.ini") == false then
 	os.message("Many older homebrews only work with LME firmware "..
 	"and the LEDA.prx plugin.\n\n"..
 	"Your firmware: "..os.cfw())
-	ini.write("sys_info.ini", "CFW", os.cfw() ) 	
-	ini.write("sys_info.ini", "model", hw.getmodel() ) 	
+	ini.write("settings.ini", "sys_info", "CFW", os.cfw() ) 	
+	ini.write("settings.ini", "sys_info", "model", hw.getmodel() ) 	
 end
 	
 collectgarbage()

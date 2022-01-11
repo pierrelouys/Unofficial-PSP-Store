@@ -249,7 +249,16 @@ function save_fave(item_to_fave)
 	io.close(file)
 end
 
-starting_tile = 0	
+function show_settings(destination)
+	draw.fillrect(0,0,480,272, night)
+	screen.print(200,10, "Settings", 0.7, color.white, neon_pink)
+	draw.line(20, 30, 460, 30, color.white)
+	screen.print(30, 40, "Default save location: " .. destination)
+	draw.line(20, 255, 460, 255, color.white)
+end
+
+starting_tile = 0
+destination = ini.read("settings.ini", "settings", "default_save", "ms0:/PSP/GAME/")
 
 selected_category_table = macro_categories[current_macro_cat]["content"]
 reload_tiles(selected_category_table, current_category, starting_tile)
@@ -266,11 +275,7 @@ while running == true do
 			selected = false
 		end
 		if buttons.cross then		
-			if item_page["destination"] then
-				destination = item_page["destination"]
-			else
-				destination = "ms0:/PSP/GAME/"
-			end		
+			if item_page["destination"] then destination = item_page["destination"] end		
 			item_page["dl_status"] = install_app(item_page["dl_url"], destination)
 		end		
 		if buttons.triangle then		
@@ -279,7 +284,7 @@ while running == true do
 		end		
 		if buttons.square then
 			if item_page["eboot_path"] then
-				game.launch("ms0:/PSP/GAME/"..item_page["eboot_path"])
+				game.launch(destination .. item_page["eboot_path"])
 			end
 		end	
 	elseif categories_menu then
@@ -356,6 +361,17 @@ while running == true do
 			macro_categories_menu = false
 			categories_menu = true
 		end		
+	elseif settings_menu then
+		show_settings(destination)
+		if buttons.cross then
+			destination = osk.init("Default save path", destination)
+			if string.sub(destination, -1) != "/" then destination = destination.."/" end
+			ini.write("settings.ini", "settings", "default_save", destination)
+			settings_menu = false
+		end
+		if buttons.circle then
+			settings_menu = false			
+		end		
 	else
 		draw_home_tiles(selected_category_table[current_category], starting_tile)		
 		if buttons.right then
@@ -424,6 +440,9 @@ while running == true do
 				current_category -= 1
 				reload_tiles(selected_category_table, current_category, starting_tile)
 			end
+		end
+		if buttons.start then
+			settings_menu = true
 		end
 		if buttons.select then
 			cats_origin = {current_macro_cat, current_category}

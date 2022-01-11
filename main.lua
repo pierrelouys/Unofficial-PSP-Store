@@ -253,8 +253,16 @@ function show_settings(destination)
 	draw.fillrect(0,0,480,272, night)
 	screen.print(200,10, "Settings", 0.7, color.white, neon_pink)
 	draw.line(20, 30, 460, 30, color.white)
-	screen.print(30, 40, "Default save location: " .. destination)
+	screen.print(30, 40, string.format("%-30s %s","Default save location:", destination))
 	draw.line(20, 255, 460, 255, color.white)
+end
+
+function change_save_path(destination)
+	local destination_input = osk.init("Default save path", destination)
+	if destination_input then destination = destination_input end
+	if string.sub(destination, -1) != "/" then destination = destination.."/" end
+	ini.write("settings.ini", "settings", "default_save", destination)
+	return destination
 end
 
 starting_tile = 0
@@ -364,10 +372,7 @@ while running == true do
 	elseif settings_menu then
 		show_settings(destination)
 		if buttons.cross then
-			destination = osk.init("Default save path", destination)
-			if string.sub(destination, -1) != "/" then destination = destination.."/" end
-			ini.write("settings.ini", "settings", "default_save", destination)
-			settings_menu = false
+			destination = change_save_path(destination)
 		end
 		if buttons.circle then
 			settings_menu = false			

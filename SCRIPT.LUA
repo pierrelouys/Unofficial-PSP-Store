@@ -55,6 +55,7 @@ end
 function version_check()
 	local ver_file = "VERSION"
 	fetch_content("http://archive.org/download/psp-homebrew-stuff-selection/VERSION", ver_file)
+	if files.exists(ver_file) == false then return false end
 	local version_remote = io.open(ver_file, "r")
 	io.input(version_remote)
 	local ver_num_remote = io.read()

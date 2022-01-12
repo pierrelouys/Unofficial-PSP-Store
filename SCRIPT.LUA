@@ -1,4 +1,4 @@
-if files.exists("sys_info.ini") == false then
+if files.exists("settings.ini") == false then
 	os.message("Many older homebrews only work with LME firmware "..
 	"and the LEDA.prx plugin.\n\n"..
 	"Your firmware: "..os.cfw())
@@ -52,6 +52,21 @@ function fetch_content(url, destination)
 	onNetGet_params = nil
 end
 
+function version_check()
+	local ver_file = "VERSION"
+	fetch_content("http://archive.org/download/psp-homebrew-stuff-selection/VERSION", ver_file)
+	local version_remote = io.open(ver_file, "r")
+	io.input(version_remote)
+	local ver_num_remote = io.read()
+	io.close(version_remote)
+	files.delete(ver_file)
+	local ver_num_local = ini.read("settings.ini", "app_info", "version", "0")
+	if ver_num_local != ver_num_remote then
+		ini.write("settings.ini", "app_info", "version", ver_num_remote )
+		return true
+	end
+end
+
 function onNetGetFile(size, written)
 	draw.fillrect(0,0,480,272, night)
 	screen.print(50,20, "Unofficial PSP Store",1, color.white, neon_pink)
@@ -81,8 +96,11 @@ function onNetConnection(state)
 	screen.flip()
 end
 
-fetch_content("http://archive.org/download/psp-homebrew-stuff-selection/update.zip", "update.zip")
-apply_updates("update.zip")
+update_needed = version_check()
+if update_needed then
+	fetch_content("http://archive.org/download/psp-homebrew-stuff-selection/update.zip", "update.zip")
+	apply_updates("update.zip")
+end
 
 dofile("assets/content.lua")
 dofile("main.lua")

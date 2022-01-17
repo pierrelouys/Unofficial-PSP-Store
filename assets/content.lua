@@ -2999,6 +2999,121 @@ local cat_ptf_themes_content = {
 		destination = "ms0:/PSP/THEME/",
 		},		
 	}
+	
+local cat_danganronpa_themes_content  = {
+		{
+		title_en = "Theme Asahina",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_asahina.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_asahina.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Enoshima",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_enoshima.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_enoshima.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Fujisaki",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_fujisaki.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_fujisaki.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Fukawa",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_fukawa.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_fukawa.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Hagakure",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_hagakure.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_hagakure.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Ishimaru",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_ishimaru.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_ishimaru.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Kirigiri",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_kirigiri.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_kirigiri.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Kuwata",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_kuwata.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_kuwata.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Maizono",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_maizono.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_maizono.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Monokuma",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_monokuma.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_monokuma.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Naegi",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_naegi.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_naegi.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Oogami",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_oogami.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_oogami.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Oowada",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_oowada.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_oowada.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Seres",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_seres.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_seres.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Togami",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_togami.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_togami.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Theme Yamada",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/theme_yamada.jpg",
+		description_en = [[]],
+		dl_url = "https://archive.org/download/psp-homebrew-stuff-selection/theme/theme_yamada.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+	}
 
 local cat_nyc2123_content = {
 		{
@@ -3249,6 +3364,12 @@ local cat_ptf_themes_meta = {
 	content = cat_ptf_themes_content
 	}
 	
+local cat_danganronpa_themes_meta = { 
+	title_en = "Danganronpa Themes",
+	description_en = [[]],
+	content = cat_danganronpa_themes_content
+	}
+	
 --
 -- TESTING
 --
@@ -3322,6 +3443,7 @@ local macro_themes = {
 	title_en = "Themes",
 	content = {
 		cat_ptf_themes_meta,
+		cat_danganronpa_themes_meta,
 		}
 	}
 	

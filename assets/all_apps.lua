@@ -5760,16 +5760,6 @@ local cat_allapps_PSP_content = {
 		version = "1.1.6",
 		},
 		{
-		title_en = "PSP Image Converter",
-		img = "http://archive.org/services/img/lua-pic-converter.-7z",
-		description_en = [[Homebrew app for PSP.]],
-		dl_url = "http://archive.org/download/lua-pic-converter.-7z/Lua Pic Converter.zip",
-		size = "991341",
-		author = "Glynnder",
-		updated_date = "2006-01-07",
-		version = "",
-		},
-		{
 		title_en = "PSP Info",
 		img = "http://archive.org/services/img/psp-info-v-4.7z",
 		description_en = [[Homebrew app for PSP.]],

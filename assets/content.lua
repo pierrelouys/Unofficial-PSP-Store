@@ -3468,3 +3468,21 @@ if files.exists("assets/favorites.lua") then dofile("assets/favorites.lua") end
 if files.exists("assets/game_jams.lua") then dofile("assets/game_jams.lua") end
 if files.exists("assets/all_games.lua") then dofile("assets/all_games.lua") end
 if files.exists("assets/all_apps.lua") then dofile("assets/all_apps.lua") end
+
+local cat_todayspicks_content = {}
+local todaysdate = os.getdate():match "([0-9]+/[0-9]+/[0-9]+)"
+math.randomseed(todaysdate:gsub("/", ""))
+
+for i=1, 6 do
+	local random_cat_no = math.random(#macro_allgames["content"])
+	local random_game_no = math.random(#macro_allgames["content"][random_cat_no]["content"])
+	cat_todayspicks_content[i] = macro_allgames["content"][random_cat_no]["content"][random_game_no]
+end
+
+local cat_todayspicks_meta = { 
+	title_en = "Today's picks",
+	description_en = [[The selected brews of ]] .. todaysdate,
+	content = cat_todayspicks_content
+	}
+
+macro_top_page["content"][#macro_top_page["content"] + 1] = cat_todayspicks_meta

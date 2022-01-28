@@ -3509,16 +3509,17 @@ local cat_official_meta = {
 -- THEMES
 --	
 	
+local cat_ctf_themes_meta = { 
+	title_en = "CTF Themes",
+	description_en = [[CTF themes require the CXMB
+					plugin to work.]],
+	content = cat_ctf_themes_content
+	}
+	
 local cat_ptf_themes_meta = { 
 	title_en = "PTF Themes",
 	description_en = [[Swag for your PSP.]],
 	content = cat_ptf_themes_content
-	}
-	
-local cat_ctf_themes_meta = { 
-	title_en = "CTF Themes",
-	description_en = [[Swag for your PSP.]],
-	content = cat_ctf_themes_content
 	}
 	
 local cat_danganronpa_themes_meta = { 

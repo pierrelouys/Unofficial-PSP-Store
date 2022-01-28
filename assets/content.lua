@@ -2495,6 +2495,13 @@ local cat_testing_content = {
 
 local cat_ptf_themes_content = {
 		{
+		title_en = "Wakanda Forever Theme",
+		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/Wakanda_Forever.jpg",
+		description_en = [[]],
+		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/theme/Wakanda_Forever.ptf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
 		title_en = "(. W .) Theme ",
 		img = "http://archive.org/download/psp-homebrew-stuff-selection/theme_ico/w theme.jpg",
 		description_en = [[]],

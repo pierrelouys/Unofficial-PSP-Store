@@ -2999,6 +2999,142 @@ local cat_ptf_themes_content = {
 		destination = "ms0:/PSP/THEME/",
 		},		
 	}
+
+local cat_ctf_themes_content = {
+		{
+		title_en = "Little Big Planet CTF",
+		img = "http://archive.org/download/little-big-planet-dynamic/lbp.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/little-big-planet-dynamic/LittleBigPlanet%20Dynamic.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Hex CTF",
+		img = "http://archive.org/download/hex_20220128/hex.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/hex_20220128/-hex-v2.661.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Apple Cor CTF",
+		img = "http://archive.org/download/apple-cor/apple%20cor.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/apple-cor/applecor.661.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "God Of War CTF",
+		img = "http://archive.org/download/god-of-war_20220128_1535/god%20of%20war.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/god-of-war_20220128_1535/God%20Of%20War.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "PS3 Dynamic CTF",
+		img = "http://archive.org/download/ps-3-dynamic-theme/ps3%20dynamic.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/ps-3-dynamic-theme/ps3%20dynamic%20theme.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "PS Vita Style v1.2 CTF",
+		img = "http://archive.org/download/ps-vita-style-v-1.2/ps%20vita%20style.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/ps-vita-style-v-1.2/PS%20Vita%20Style%20V1.2.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Kirby's Epic Yarn Dynamic CTF",
+		img = "http://archive.org/download/kirbys-epic-yarn-dynamic-theme/kirby%27s%20epic%20yarn.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/kirbys-epic-yarn-dynamic-theme/Kirbys%20Epic%20Yarn%20Dynamic%20Theme.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Metal Gear Solid Peace Walker CTF",
+		img = "http://archive.org/download/metal-gear-solid-peace-walker/Metal%20Gear%20Solid%20.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/metal-gear-solid-peace-walker/Metal%20Gear%20Solid%20Peace%20Walker.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Toradora Loli T CTF",
+		img = "http://archive.org/download/toradora-loli-t/Toradora%20loli.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/toradora-loli-t/Toradora%20loli_t.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Pokemon Soul Silver CTF",
+		img = "http://archive.org/download/pokemon-soul-silver/pokemon.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/pokemon-soul-silver/Pokemon%20%28SoulSilver%29.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Stiens Gate CTF",
+		img = "http://archive.org/download/stiens-gate/stiens%20gate.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/stiens-gate/Steins%20Gate%206.61.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Little Big Planet 2 Dynamic Theme CTF",
+		img = "http://archive.org/download/little-big-planet-2-dynamic-theme-661/little%20big%20planet%202.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/little-big-planet-2-dynamic-theme-661/LittleBigPlanet2%20Dynamic%20Theme%20661.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "God Eater CTF",
+		img = "http://archive.org/download/god-eater_202201/god%20eater.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/god-eater_202201/God%20Eater.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Clear XMB CTF",
+		img = "http://archive.org/download/clear-xmb/clear%20xmb.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/clear-xmb/Clear%20XMB.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Taiko Drum Master CTF",
+		img = "http://archive.org/download/taiko-drum-master.-661/TAIKO%20DRUM%20MASTER.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/taiko-drum-master.-661/Taiko_Drum_Master.661.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Ika CTF",
+		img = "http://archive.org/download/ika_20220128/IKA.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/ika_20220128/Ika_6.61.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Lotus Flower CTF",
+		img = "http://archive.org/download/lotus-flower-661-fix/LOTUS%20FLOWER.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/lotus-flower-661-fix/lotus%20flower%20661%20Fix.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "Monster Hunter 3rd CTF",
+		img = "http://archive.org/download/monster-hunter-3-rd/MONSTER%20HUNTER%203RD.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/monster-hunter-3-rd/mhp3rd.661.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+		{
+		title_en = "PS5 DynamicCTF",
+		img = "http://archive.org/download/ps-5-dynamic/PS5.jpg",
+		description_en = [[For 6.61]],
+		dl_url = "http://archive.org/download/ps-5-dynamic/PS5%20Dynamic.ctf",
+		destination = "ms0:/PSP/THEME/",
+		},
+	}
 	
 local cat_danganronpa_themes_content  = {
 		{
@@ -3372,6 +3508,12 @@ local cat_ptf_themes_meta = {
 	content = cat_ptf_themes_content
 	}
 	
+local cat_ctf_themes_meta = { 
+	title_en = "CTF Themes",
+	description_en = [[Swag for your PSP.]],
+	content = cat_ctf_themes_content
+	}
+	
 local cat_danganronpa_themes_meta = { 
 	title_en = "Danganronpa Themes",
 	description_en = [[]],
@@ -3451,6 +3593,7 @@ local macro_emulation = {
 local macro_themes = { 
 	title_en = "Themes",
 	content = {
+		cat_ctf_themes_meta,
 		cat_ptf_themes_meta,
 		cat_danganronpa_themes_meta,
 		}

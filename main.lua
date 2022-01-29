@@ -13,6 +13,7 @@ for i=1, 4 do
 	progress_indic[i] = image.load("assets/phewcumber/"..i..".png")
 end 
 prog_count = 1
+chime = sound.load("assets/bup.s3m")
 	
 function reload_tiles(selected_category_table, current_category, starting_tile)
 	tile_mosaic = nil
@@ -120,6 +121,7 @@ function install_app(file_url, destination)
 		files.extract("temp.zip", destination) 
 		files.delete("temp.zip") 
 	end
+	if chime != nil then sound.play(chime) end
 	return status
 end
 

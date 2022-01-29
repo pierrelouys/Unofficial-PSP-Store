@@ -152,6 +152,8 @@ function download_tile(img_url, img_num)
 	local fetch_count = ((#selected_category_table[current_category]["content"] - starting_tile) > 6 and 6 or #selected_category_table[current_category]["content"] - starting_tile)
 	if img_url then if img_url:match("^.+/(.+)$") then img_filename = img_url:match("^.+/(.+)$")..".jpg" end end
 	if not files.exists("img/"..img_filename) then
+		local extract_status = files.extractfile("img/img.zip", img_filename, "img")
+		if extract_status == 1 then return ("img/"..img_filename) end
 		if wlan.isconnected() == false then wlan.connect() end
 		
 		draw.fillrect(40,45,400,45, faded_bg)

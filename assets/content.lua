@@ -3258,56 +3258,75 @@ local cat_danganronpa_themes_content  = {
 		},
 	}
 
-local cat_nyc2123_content = {
+local cat_plugins_content = {
 		{
-		title_en = "Issue 1",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_01.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE1.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
+		title_en = "CXMB",
+		description_en = [[Required to use CTF themes.]],
+		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/plugins/cxmb.prx",
+		author = "Poison",
+		destination = "ms0:/seplugins/",
+		plugin_target = "VSH.TXT",
 		},
 		{
-		title_en = "Issue 2",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_02.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE2.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
-		},
-		{
-		title_en = "Issue 3",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_03.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE3.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
-		},
-		{
-		title_en = "Issue 4",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_04.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE4.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
-		},
-		{
-		title_en = "Issue 5",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_05.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE5.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
-		},
-		{
-		title_en = "Issue 6",
-		img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_06.jpg",
-		description_en = [[]],
-		dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE6.zip",
-		author = "Paco Allen, Chad Allen",
-		destination = "ms0:/PICTURE/",
+		title_en = "Download Manager",
+		description_en = [[Download files in the background.]],
+		dl_url = "http://archive.org/download/psp-homebrew-stuff-selection/plugins/dlmgr.prx",
+		author = "Total_Noob",
+		destination = "ms0:/seplugins/",
+		plugin_target = "VSH.TXT",
 		},
 	}
+
+-- local cat_nyc2123_content = {
+		-- {
+		-- title_en = "Issue 1",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_01.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE1.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+		-- {
+		-- title_en = "Issue 2",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_02.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE2.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+		-- {
+		-- title_en = "Issue 3",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_03.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE3.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+		-- {
+		-- title_en = "Issue 4",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_04.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE4.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+		-- {
+		-- title_en = "Issue 5",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_05.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE5.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+		-- {
+		-- title_en = "Issue 6",
+		-- img = "http://archive.org/download/nyc-2123.7z/thumbs/issue_06.jpg",
+		-- description_en = [[]],
+		-- dl_url = "http://archive.org/download/nyc-2123.7z/NYC2123-DAYENDER-ISSUE6.zip",
+		-- author = "Paco Allen, Chad Allen",
+		-- destination = "ms0:/PICTURE/",
+		-- },
+	-- }
 
 --
 -- META CATEGORIES
@@ -3529,6 +3548,17 @@ local cat_danganronpa_themes_meta = {
 	}
 	
 --
+-- PLUGINS
+--
+	
+local cat_plugins_meta = { 
+	title_en = "Plugins",
+	description_en = [[Plugins for VSH, GAME, POPS are 
+					stored in here.]],
+	content = cat_plugins_content
+	}
+	
+--
 -- TESTING
 --
 	
@@ -3607,6 +3637,13 @@ local macro_themes = {
 		}
 	}
 	
+local macro_plugins = { 
+	title_en = "Plugins",
+	content = {
+		cat_plugins_meta,
+		}
+	}
+	
 local macro_testing = { 
 	title_en = "Testing",
 	content = {
@@ -3621,6 +3658,7 @@ macro_categories = {
 	macro_off_demos,
 	macro_emulation,
 	macro_themes,
+	macro_plugins,
 	macro_testing,
 	}
 

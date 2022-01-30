@@ -98,7 +98,7 @@ function draw_home_tiles(selected_category_table, starting_tile)
 	screen.print(440,230, "R ->",0.7, concrete_gray)
 end
 
-function install_app(file_url, destination)
+function install_app(file_url, destination, plugin_target)
 	if wlan.isconnected() == false then wlan.connect() end
 	draw.fillrect(40,45,400,45, faded_bg)
 	screen.print(50,50, "Starting download...",
@@ -113,8 +113,11 @@ function install_app(file_url, destination)
 	if file_url:match("\.zip$") then
 		status = http.getfile(file_url, "temp.zip")
 	else
-		save_path = destination..file_url:match("^.+/(.+)$")
+		local save_path = destination..file_url:match("^.+/(.+)$")
 		status = http.getfile(file_url, save_path)
+		if plugin_target != nil then
+			install_plugin(save_path, plugin_target)
+		end
 	end
 	transfer_duration = nil
 	if file_url:match("\.zip$") then 
@@ -123,6 +126,14 @@ function install_app(file_url, destination)
 	end
 	if chime != nil then sound.play(chime) end
 	return status
+end
+
+function install_plugin(save_path, plugin_target)
+	local plugin_entry = "\n"..save_path.." 1"
+	local plugin_file = io.open("ms0:/seplugins/"..plugin_target, "a")
+	io.output(plugin_file)
+	io.write(plugin_entry)
+	io.close(plugin_file)
 end
 
 function onNetGetFile(size, written)
@@ -288,7 +299,7 @@ while running == true do
 		end
 		if buttons.cross then		
 			if item_page["destination"] then destination = item_page["destination"] end		
-			item_page["dl_status"] = install_app(item_page["dl_url"], destination)
+			item_page["dl_status"] = install_app(item_page["dl_url"], destination, item_page["plugin_target"])
 		end		
 		if buttons.triangle then		
 			save_fave(item_page)
